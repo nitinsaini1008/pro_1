@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+	<form action="" method="post">
+		{% csrf_token %}
+		enter first name<input type="text" name="first_name"><br>
+		enter last name<input type="text" name="last_name"><br>
+		enter email<input type="email" name="email"><br>
+		enter username<input type="text" name="username"><br>
+		enter password<input type="password" name="password1"><br>
+		re enter password<input type="password" name="password2"><hr>
+		<input type="submit" name="submit"><br>
+	</form>
+	<div>
+	{% for i in messages %}
+	<h2>{{i}}</h2>
+	{% endfor %}
+</div>
+</body>	
+</html>
